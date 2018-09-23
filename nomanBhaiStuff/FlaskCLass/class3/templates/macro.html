@@ -1,0 +1,11 @@
+{% macro check_odd_even(num) %}
+    {% if num%2==0 %}
+        {{num}} is even
+    {% else %}
+        {{num}} is odd
+    {% endif %}
+{% endmacro %}
+
+{% for i in args %}
+    <li>{{ check_odd_even(i) }}</li>
+{% endfor %}
